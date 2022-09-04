@@ -17,10 +17,12 @@ wasm-bindgen = ["instant/wasm-bindgen", "ggrs/wasm-bindgen"]
 
 [dependencies]
 bevy = { version = "0.7", default-features = false }
-bytemuck = { version = "1.7", features=["derive"]}
+bytemuck = { version = "1.7", features = ["derive"] }
 instant = "0.1"
 log = "0.4"
-ggrs = { git = "https://github.com/gschup/ggrs", features=["sync-send"]}
+ggrs = { git = "https://github.com/cscorley/ggrs", branch = "arbitrary-messages", features = [
+    "sync-send",
+] }
 
 [dev-dependencies]
 structopt = "0.3"
